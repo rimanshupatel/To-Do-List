@@ -84,7 +84,7 @@ export default function Todo() {
               key={index}
               className="flex items-center justify-between py-2 px-3 my-3 primary-color rounded"
             >
-              <p className={`w-full`}>{items.task}</p>
+              <p className="w-full">{items.task}</p>
               <div className="flex">
                 <button className="text-2xl mx-2">
                   <BiSolidEdit onClick={() => handleEdit(items.id, index)} />
