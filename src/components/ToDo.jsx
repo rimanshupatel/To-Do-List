@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { MdDelete } from "react-icons/md";
 import { BiSolidEdit } from "react-icons/bi";
 import { useEffect, useState } from "react";
+
 export default function Todo() {
   const [todo, SetTodo] = useState("");
   const [todoList, SettodoList] = useState([]);
@@ -12,6 +13,7 @@ export default function Todo() {
     let todo = JSON.parse(localStorage.getItem("todoList"));
     SettodoList(todo);
   }, []);
+
   //  save to local-storage
   const saveTodos = () => {
     localStorage.setItem("todoList", JSON.stringify(todoList));
