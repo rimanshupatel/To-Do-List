@@ -11,7 +11,9 @@ export default function Todo() {
 
   useEffect(() => {
     let todo = JSON.parse(localStorage.getItem("todoList"));
-    SettodoList(todo);
+    if (todo.length > 0) {
+      SettodoList(todo);
+    }
   }, []);
 
   //  save to local-storage
