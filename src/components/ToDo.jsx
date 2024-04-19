@@ -11,7 +11,8 @@ export default function Todo() {
 
   useEffect(() => {
     let todo = JSON.parse(localStorage.getItem("todoList"));
-    if (todo.length > 0) {
+
+    if (todo && todo.length) {
       SettodoList(todo);
     }
   }, []);
@@ -82,6 +83,7 @@ export default function Todo() {
         </div>
         <ul className="w-[22rem] sm:w-[27rem]">
           {/* creating new todo items */}
+          {todoList.length === 0 && "No to do-item Add task"}
 
           {todoList.map((items, index) => (
             <li
